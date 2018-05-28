@@ -5,6 +5,9 @@ export default class VBAutocomplete extends Vue {
     @Prop()
     items: any[];
 
+    @Prop({default: false})
+    icon: string | false;
+
     @Prop(Boolean)
     isClickable: boolean;
 
