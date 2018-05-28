@@ -1,7 +1,10 @@
-import { Component, Vue, Prop } from 'vue-property-decorator';
+import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
 
 @Component
 export default class VBDropdown extends Vue {
+    @Prop(Boolean)
+    value: boolean;
+
     @Prop()
     items: any[];
 
@@ -16,10 +19,24 @@ export default class VBDropdown extends Vue {
 
     isActive = false;
 
+    beforeMount() {
+        this.isActive = this.value;
+    }
+
     mounted() {
         if (this.isReactive) {
             this.$watch('items', this.itemsChanged);
         }
+    }
+
+    @Watch('isActive')
+    isActiveChanged(val: boolean) {
+        this.$emit('input', val)
+    }
+
+    @Watch('value')
+    valueChanged(val: boolean) {
+        this.isActive = val;
     }
 
     triggerBlur() {

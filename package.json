@@ -1,0 +1,25 @@
+{
+    "name": "vue-bulma",
+    "description": "A vue implementation of the Bulma CSS framework",
+    "version": "0.1.0",
+    "author": "geoloep <contact@geoloep.nl>",
+    "license": "MIT",
+    "scripts": {
+      "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --host 0.0.0.0",
+      "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+      "stats": "cross-env NODE_ENV=production webpack  --progress --json > stats.json"
+    },
+    "dependencies": {
+
+    },
+    "peerDependencies": {
+      "vue": "~2.5.0"
+    },
+    "devDependencies": {
+      "vue": "~2.5.0",
+
+      "typescript": "~2.8.0",
+      "vue-property-decorator": "~6.0.0"
+    }
+  }
+  
