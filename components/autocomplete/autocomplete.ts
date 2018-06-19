@@ -24,29 +24,60 @@ export default class VBAutocomplete extends Vue {
 
     dropdown = false;
 
+    keyMapping = {
+        ArrowUp: this.cursorUp,
+        ArrowDown: this.cursorDown,
+        Enter: this.cursorEnter,
+        Tab: this.cursorTab,
+    };
+
     @Watch('items')
     itemsChanged() {
         this.cursor = -1;
     }
 
-    keyDown() {
+    cursorDown(e: KeyboardEvent) {
+        e.preventDefault();
+
+        this.dropdown = true;
+
         if (this.items[this.cursor + 1]) {
             this.cursor += 1;
         }
     }
 
-    keyUp() {
+    cursorUp(e: KeyboardEvent) {
+        e.preventDefault();
+
         if (this.cursor > 0) {
             this.cursor -= 1;
         }
     }
 
-    keyEnter() {
+    cursorEnter(e: KeyboardEvent) {
+        e.preventDefault();
+
         if (this.cursor >= 0) {
             this.$emit('select', this.items[this.cursor]);
         }
-        
+
+        this.cursorTab(e);
+    }
+
+    cursorTab(e: KeyboardEvent) {
+        if (this.cursor >= 0) {
+            this.$emit('select', this.items[this.cursor]);
+        }
+
         this.dropdown = false;
+    }
+
+    keyDown(e: KeyboardEvent) {
+        if (this.keyMapping[e.key]) {
+            this.keyMapping[e.key](e);
+        } else if (!this.dropdown) {
+            this.dropdown = true;
+        }
     }
 
     itemClick(item: string) {
