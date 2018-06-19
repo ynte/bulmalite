@@ -5,8 +5,8 @@
         </div>
         <div class="dropdown-menu" :id="'dropdown-menu-' + _uid" role="menu">
             <div class="dropdown-content" @click="contentClick">
-                <template v-for="item in items">
-                    <slot name="items" :item="item"><a class="dropdown-item">{{item}}</a></slot>
+                <template v-for="(item, index) in items">
+                    <slot name="items" :item="item" :index="index"><a class="dropdown-item">{{item}}</a></slot>
                 </template>
             </div>
         </div>
