@@ -5,9 +5,8 @@
     "author": "geoloep <contact@geoloep.nl>",
     "license": "MIT",
     "scripts": {
-      "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --host 0.0.0.0",
-      "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-      "stats": "cross-env NODE_ENV=production webpack  --progress --json > stats.json"
+      "dev": "tsc -d -w",
+      "collect": "node collect-vue.js"
     },
     "dependencies": {
 
@@ -18,6 +17,7 @@
     "devDependencies": {
       "vue": "~2.5.0",
 
+      "fs-extra": "~6.0.1",
       "typescript": "~2.8.0",
       "vue-property-decorator": "~6.0.0"
     }
