@@ -1,3 +1,3 @@
 <template functional>
-    <span class="icon" :class="data.staticClass"><span :class="props.icon"></span></span>
+    <span class="icon" :class="[data.staticClass, data.class]"><span :class="props.icon"></span></span>
 </template>
