@@ -4,6 +4,7 @@
     "version": "0.1.0",
     "author": "geoloep <contact@geoloep.nl>",
     "license": "MIT",
+    "main": "lib/index.js",
     "scripts": {
       "dev": "tsc -d -w",
       "collect": "node collect-vue.js"
