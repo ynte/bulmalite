@@ -1,4 +1,4 @@
-# vue-bulma
+# Bulmalite
 A wip unofficial Vue implementation of the Bulma CSS framework.
 
 Some wishes that lead to the creation of this project:
