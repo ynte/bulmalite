@@ -7,6 +7,7 @@ Some wishes that lead to the creation of this project:
 * Scoped slots in stead of child components
 * Bulma style modifier props
 * Add modifiers to add functionality not to remove them
+* Use native bulma css classes when possible
 
 ## Install
 `npm install bulmalite`
