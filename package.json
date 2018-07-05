@@ -1,6 +1,11 @@
 {
-    "name": "vue-bulma",
+    "name": "bulmalite",
     "description": "A vue implementation of the Bulma CSS framework",
+    "keywords": [
+      "bulma",
+      "vue",
+      "components"
+    ],
     "version": "0.1.0",
     "author": "geoloep <contact@geoloep.nl>",
     "license": "MIT",
