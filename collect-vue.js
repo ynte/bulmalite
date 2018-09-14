@@ -7,15 +7,16 @@ var filterFunc = (src, dest) => {
         return true;
     }
 
-    var t =  /.vue$/.test(src);
+    var isVue =  /.vue$/.test(src);
+    var isScss = /.scss$/.test(src)
 
-    if (t) {
+    if (isVue || isScss) {
         console.log('Collected ' + src);
     } else {
         // console.log('Skipped ' + src);
     }
 
-    return t;
+    return isVue || isScss;
 };
 
 try {
