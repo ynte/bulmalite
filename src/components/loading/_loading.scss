@@ -1,0 +1,17 @@
+.vb-loading-overlay {
+    @include overlay;
+
+    background: rgba($white, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vb-loading {
+    @include loader;
+
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.25em;
+}
