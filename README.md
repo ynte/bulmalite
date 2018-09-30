@@ -1,13 +1,49 @@
 # Bulmalite
 A wip unofficial Vue implementation of the Bulma CSS framework.
 
-Some wishes that lead to the creation of this project:
+The principles behind this project:
 * Modular component registration
-* Leveraging typescript functionality
-* Scoped slots in stead of child components
+* Leverage typescript functionality
+* Usage of Scoped slots instead of child components
 * Bulma style modifier props
-* Add modifiers to add functionality not to remove them
-* Use native bulma css classes when possible
+* Modifiers exist to add functionality, not for removing them
+* Prefer native bulma css classes when possible
+
+## Comparisons
+These comparisons demonstrate some of the effects the principles outlined above.
+
+### Icons
+Buefy:
+```html
+<b-icon pack="fas" icon="user" size="is-small"></b-icon>
+```
+
+Bulmalite:
+```html
+<bl-icon class="is-small" icon="fas fa-user"></bl-icon>
+```
+
+`class` is used to pass the native `.is-small` to the icon. The icon itself can be specified in a single prop.
+
+### Modals
+Buefy
+```html
+<b-modal :active.sync="isModalActive" :canCancel="false"></b-modal>
+```
+
+Bulmalite
+```html
+<bl-modal v-model="isModalActive"></bl-modal>
+```
+
+Two way binding with bulmalite components uses `v-model` by default. There is no need to disable modal close behavoir options, props can only add functionality.
+
+For example:
+
+```html
+<bl-modal v-model="isModalActive" has-modal-close has-background-close></bl-modal>
+```
+Props use a bulma-like syntax.
 
 ## Install
 `npm install bulmalite`
@@ -23,16 +59,16 @@ Or register individual components with
 import 'bulmalite/lib/components/icon';
 ```
 
-Component names are prefixed with 'vb-';
+Component names are prefixed with 'bl-';
 
-You can also register them locally
+You can also register them locally, under any name you like
 ```javascript
 import Dropdown from 'bulmalite/lib/components/dropdown/dropdown.vue';
 
 new Vue({
   el: '#app'
   components: {
-    'vb-dropdown': Dropdown,
+    'bl-dropdown': Dropdown,
   }
 })
 ```
