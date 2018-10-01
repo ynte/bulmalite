@@ -1,7 +1,10 @@
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Prop } from 'vue-property-decorator';
 
 @Component
 export default class Navbar extends Vue {
+    @Prop(Boolean)
+    isContained: boolean;
+
     isActive = false;
     
     /**
