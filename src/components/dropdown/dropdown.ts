@@ -31,7 +31,7 @@ export default class VBDropdown extends Vue {
 
     @Watch('isActive')
     isActiveChanged(val: boolean) {
-        this.$emit('input', val)
+        this.$emit('input', val);
     }
 
     @Watch('value')

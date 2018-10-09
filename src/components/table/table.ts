@@ -63,7 +63,7 @@ export default class Table extends Vue {
 
     /**
      * Check if the input headers prop contains objects or strings
-     * @param headers 
+     * @param headers
      */
     isHeaderItemList(headers: IHeaderItem[] | string[]): headers is IHeaderItem[] {
         return headers.length === 0 || (headers as IHeaderItem[])[0].name !== undefined;
