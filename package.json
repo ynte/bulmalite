@@ -12,6 +12,7 @@
     "main": "lib/index.js",
     "scripts": {
       "dev": "tsc -d -w",
+      "build": "tsc -d && node collect-vue.js",
       "collect": "node collect-vue.js"
     },
     "dependencies": {
