@@ -5,7 +5,7 @@ export default class VBDropdown extends Vue {
     @Prop(Boolean)
     value: boolean;
 
-    @Prop()
+    @Prop({ default: () => [null] })
     items: any[];
 
     @Prop(Boolean)
@@ -16,6 +16,9 @@ export default class VBDropdown extends Vue {
 
     @Prop(Boolean)
     isBlurable: boolean;
+
+    @Prop(Boolean)
+    isToggle: boolean;
 
     isActive = false;
 
@@ -46,7 +49,9 @@ export default class VBDropdown extends Vue {
     }
 
     triggerClick() {
-        if (this.isClickable) {
+        if (this.isToggle) {
+            this.isActive = !this.isActive;
+        } else if (this.isClickable) {
             this.isActive = true;
         }
     }
