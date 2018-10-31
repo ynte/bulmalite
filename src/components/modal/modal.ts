@@ -3,14 +3,23 @@ import { Component, Vue, Prop } from 'vue-property-decorator';
 @Component
 export default class VBModal extends Vue {
     @Prop(Boolean)
-    isLazy: boolean;
-
-    @Prop(Boolean)
     value: boolean;
 
+    /**
+     * Only load modal contents after modal becomes active
+     */
+    @Prop(Boolean)
+    isLazy: boolean;
+
+    /**
+     * Show a .modal-close button
+     */
     @Prop(Boolean)
     hasModalClose: boolean;
 
+    /**
+     * Close the modal when clicking on the .modal-background or when pressing escape
+     */
     @Prop(Boolean)
     hasBackgroundClose: boolean;
 
@@ -23,7 +32,7 @@ export default class VBModal extends Vue {
     }
 
     keyUp(event: KeyboardEvent) {
-        if (this.value && event.keyCode === 27) {
+        if (this.value && this.hasBackgroundClose && event.keyCode === 27) {
             this.$emit('input', false);
         }
     }
