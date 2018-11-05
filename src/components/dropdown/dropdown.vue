@@ -4,10 +4,9 @@
             <slot></slot>
         </div>
         <div class="dropdown-menu" :id="'dropdown-menu-' + _uid" role="menu">
-            <div class="dropdown-content" @click="contentClick">
-                <template v-for="(item, index) in items">
-                    <slot name="items" :item="item" :index="index"><a class="dropdown-item" :key="index">{{item}}</a></slot>
-                </template>
+            <!-- <slot name="content" class="dropdown-content"></slot> -->
+            <div class="dropdown-content">
+                <slot name="content"></slot>
             </div>
         </div>
     </div>

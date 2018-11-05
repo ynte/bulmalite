@@ -5,9 +5,6 @@ export default class BlDropdown extends Vue {
     @Prop(Boolean)
     value: boolean;
 
-    @Prop({ default: () => [null] })
-    items: any[];
-
     /**
      * Activate dropdown after click on trigger
      */
@@ -21,19 +18,10 @@ export default class BlDropdown extends Vue {
     isToggle: boolean;
 
     /**
-     * Activate dropdown after items change
-     */
-    @Prop(Boolean)
-    isReactive: boolean;
-
-    /**
      * Close dropdown after a click outside the dropdown root
      */
     @Prop(Boolean)
-    isBlurable: boolean;
-
-    @Prop(Boolean)
-    isBlurableOutside: boolean;
+    willBlur: boolean;
 
     isActive = false;
 
@@ -41,16 +29,17 @@ export default class BlDropdown extends Vue {
         return this.isActive ? 'is-active' : undefined;
     }
 
+    @Watch('value')
+    valueChanged(value: boolean) {
+        this.isActive = value;
+    }
+
     beforeMount() {
         this.isActive = this.value;
     }
 
     mounted() {
-        if (this.isReactive) {
-            this.$watch('items', this.itemsChanged);
-        }
-
-        if (this.isBlurable) {
+        if (this.willBlur) {
             window.addEventListener('click', this.triggerBlur);
         }
     }
@@ -59,35 +48,22 @@ export default class BlDropdown extends Vue {
         window.removeEventListener('click', this.triggerBlur);
     }
 
-    @Watch('isActive')
-    isActiveChanged(val: boolean) {
-        this.$emit('input', val);
-    }
-
-    @Watch('value')
-    valueChanged(val: boolean) {
-        this.isActive = val;
+    setState(value: boolean) {
+        this.isActive = value;
+        this.$emit('input', value);
     }
 
     triggerBlur(event: MouseEvent) {
         if (event.target && !(this.$refs.self as HTMLElement).contains(event.target as Node)) {
-            this.isActive = false;
+            this.setState(false);
         }
     }
 
     triggerClick() {
         if (this.isToggle) {
-            this.isActive = !this.isActive;
+            this.setState(!this.isActive);
         } else if (this.isClickable) {
-            this.isActive = true;
+            this.setState(true);
         }
-    }
-
-    contentClick() {
-        // this.isActive = false;
-    }
-
-    itemsChanged() {
-        this.isActive = true;
     }
 }
