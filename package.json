@@ -24,10 +24,10 @@
     "devDependencies": {
       "vue": "~2.5.0",
 
-      "fs-extra": "~6.0.1",
-      "typescript": "~2.8.0",
-      "vue-property-decorator": "~6.0.0",
-      "tslint": "^5.11.0"
+      "fs-extra": "^7.0.1",
+      "typescript": "^3.0.0",
+      "vue-property-decorator": "^7.0.0",
+      "tslint": "^5.12.0"
     }
   }
   
