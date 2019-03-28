@@ -54,7 +54,7 @@ export default class BlDropdown extends Vue {
     }
 
     triggerBlur(event: MouseEvent) {
-        if (event.target && !(this.$refs.self as HTMLElement).contains(event.target as Node)) {
+        if (this.isActive && event.target && !(this.$refs.self as HTMLElement).contains(event.target as Node)) {
             this.setState(false);
         }
     }
