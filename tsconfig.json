@@ -6,6 +6,7 @@
       "es5",
       "scripthost",
       "es2015.core",
+      "es2015.iterable",
       "es2015.promise"
     ],
     "module": "commonjs",
