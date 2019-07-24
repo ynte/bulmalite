@@ -11,3 +11,4 @@ stats.json
 *.ntvs*
 *.njsproj
 *.sln
+.vscode

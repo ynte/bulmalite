@@ -2,32 +2,29 @@
     "name": "bulmalite",
     "description": "A vue implementation of the Bulma CSS framework",
     "keywords": [
-      "bulma",
-      "vue",
-      "components"
+        "bulma",
+        "vue",
+        "components"
     ],
     "version": "0.4.0",
     "author": "geoloep <contact@geoloep.nl>",
     "license": "MIT",
     "main": "lib/index.js",
     "scripts": {
-      "dev": "tsc -d -w",
-      "build": "tsc -d && node collect-vue.js",
-      "collect": "node collect-vue.js"
+        "dev": "tsc -d -w",
+        "build": "tsc -d && node collect-vue.js",
+        "collect": "node collect-vue.js"
     },
-    "dependencies": {
-
-    },
+    "dependencies": {},
     "peerDependencies": {
-      "vue": "~2.5.0"
+        "vue": "^2.0.0"
     },
     "devDependencies": {
-      "vue": "~2.5.0",
-
-      "fs-extra": "^7.0.1",
-      "typescript": "^3.0.0",
-      "vue-property-decorator": "^7.0.0",
-      "tslint": "^5.12.0"
+        "fs-extra": "^7.0.1",
+        "tslint": "^5.12.0",
+        "typescript": "^3.0.0",
+        "vue": "2.5.17",
+        "vue-property-decorator": "^7.0.0",
+        "vue-router": "^3.0.0"
     }
-  }
-  
+}
