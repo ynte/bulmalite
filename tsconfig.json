@@ -24,6 +24,9 @@
     "./src/**/*.ts",
     "./types/*.d.ts"
   ],
+  "files": [
+    "./node_modules/vue-router/types/index.d.ts"
+  ],
   "exclude": [
     "node_modules"
   ],
