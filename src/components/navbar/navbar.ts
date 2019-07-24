@@ -2,7 +2,11 @@ import { Component, Vue, Prop } from 'vue-property-decorator';
 
 import NavbarBurger from './navbarBurger/navbarBurger.vue';
 
-@Component
+@Component({
+    components: {
+        NavbarBurger,
+    },
+})
 export default class Navbar extends Vue {
     /**
      * Wrap Navbar contents in a container
