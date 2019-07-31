@@ -1,7 +1,7 @@
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
 
 @Component
-export default class VBAutocomplete extends Vue {
+export default class BlAutocomplete extends Vue {
     @Prop()
     items: any[];
 

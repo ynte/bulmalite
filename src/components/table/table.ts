@@ -8,7 +8,7 @@ export interface IHeaderItem {
 }
 
 @Component
-export default class Table extends Vue {
+export default class BlTable extends Vue {
     @Prop()
     headers: IHeaderItem[] | string[];
 

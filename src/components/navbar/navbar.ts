@@ -7,7 +7,7 @@ import NavbarBurger from './navbarBurger/navbarBurger.vue';
         NavbarBurger,
     },
 })
-export default class Navbar extends Vue {
+export default class BlNavbar extends Vue {
     /**
      * Wrap Navbar contents in a container
      */

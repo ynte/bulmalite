@@ -1,7 +1,7 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
 
 @Component
-export default class VBModal extends Vue {
+export default class BlModal extends Vue {
     @Prop(Boolean)
     value: boolean;
 

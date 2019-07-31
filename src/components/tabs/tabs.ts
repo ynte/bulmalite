@@ -1,7 +1,7 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
 
 @Component
-export default class VBTabs extends Vue {
+export default class BlTabs extends Vue {
     @Prop()
     value: number;
 

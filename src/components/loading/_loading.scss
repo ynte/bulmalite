@@ -1,4 +1,4 @@
-.vb-loading-overlay {
+.bl-loading-overlay {
     @include overlay;
 
     background: rgba($white, 0.5);
@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.vb-loading {
+.bl-loading {
     @include loader;
 
     width: 3rem;

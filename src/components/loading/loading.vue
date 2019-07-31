@@ -1,7 +1,5 @@
 <template functional>
-    <div class="vb-loading-overlay">
-        <div class="vb-loading">
-
-        </div>
+    <div class="bl-loading-overlay">
+        <div class="bl-loading"></div>
     </div>
 </template>
