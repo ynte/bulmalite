@@ -13,18 +13,38 @@
     "scripts": {
         "dev": "tsc -d -w",
         "build": "tsc -d && node collect-vue.js",
-        "collect": "node collect-vue.js"
+        "collect": "node collect-vue.js",
+        "docs:serve": "vue-cli-service serve",
+        "docs:build": "vue-cli-service build"
     },
     "dependencies": {},
     "peerDependencies": {
         "vue": "^2.0.0"
     },
     "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.9.0",
+        "@vue/cli-plugin-typescript": "^3.9.0",
+        "@vue/cli-service": "^3.9.0",
+        "bulma": "^0.7.5",
+        "core-js": "^2.6.5",
         "fs-extra": "^7.0.1",
+        "sass": "^1.18.0",
+        "sass-loader": "^7.1.0",
         "tslint": "^5.12.0",
         "typescript": "^3.0.0",
-        "vue": "2.5.17",
-        "vue-property-decorator": "^7.0.0",
-        "vue-router": "^3.0.0"
-    }
+        "vue": "^2.6.0",
+        "vue-class-component": "^7.0.2",
+        "vue-property-decorator": "^8.1.0",
+        "vue-router": "^3.0.3",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions"
+    ]
 }
