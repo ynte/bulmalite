@@ -17,7 +17,9 @@
         "docs:serve": "vue-cli-service serve",
         "docs:build": "vue-cli-service build"
     },
-    "dependencies": {},
+    "dependencies": {
+        "vue-property-decorator": "^8.1.0"
+    },
     "peerDependencies": {
         "vue": "^2.0.0"
     },
@@ -33,8 +35,6 @@
         "tslint": "^5.12.0",
         "typescript": "^3.0.0",
         "vue": "^2.6.0",
-        "vue-class-component": "^7.0.2",
-        "vue-property-decorator": "^8.1.0",
         "vue-router": "^3.0.3",
         "vue-template-compiler": "^2.6.10"
     },
