@@ -90,7 +90,7 @@ import 'node_modules/bulmalite/sass/bulmalite.scss';
 ```
 
 ```scss
-@import '@import "node_modules/bulmalite/sass/bulmalite';
+@import 'node_modules/bulmalite/sass/bulmalite';
 ```
 
 Or load individual styles
@@ -99,11 +99,11 @@ import 'node_modules/bulmalite/sass/components/dropdown.scss';
 ```
 
 ```scss
-@import '@import "node_modules/bulmalite/sass/components/dropdown';
+@import 'node_modules/bulmalite/sass/components/dropdown';
 ```
 
 ## Docs
-Documenation is under development in the `/docs/` folder.
+Documentation is under development in the `/docs/` folder.
 
 ## Development
 Bulmalite is developed using typescript. View models use the composition API and contained in a seperate .ts file.
