@@ -1,28 +1,26 @@
 'use strict';
 
-var fse = require('fs-extra');
+const glob = require('glob');
+const fs = require('fs');
 
-var filterFunc = (src, dest) => {
-    if (fse.statSync(src).isDirectory()) {
-        return true;
+const tsProp = ' lang="ts"';
+
+glob('src/components/**/*.vue', {}, function (err, files) {
+    console.assert(err === null);
+
+    for (const file of files) {
+        console.log('Processing:', file);
+
+        fs.readFile(file, 'utf8', (err, data) => {
+            let text = data.replace(tsProp, '');
+            text = text.replace('.ts"', '.js"');
+
+            fs.writeFile(file.replace('src', 'dist'), text, function (err) {
+                if (err !== null) {
+                    console.log('Error:', file);
+                    throw new Error(err);
+                }
+            });
+        });
     }
-
-    var isVue =  /.vue$/.test(src);
-    var isScss = /.scss$/.test(src)
-
-    if (isVue || isScss) {
-        console.log('Collected ' + src);
-    } else {
-        // console.log('Skipped ' + src);
-    }
-
-    return isVue || isScss;
-};
-
-try {
-    fse.copySync('./src', './lib', {
-        filter: filterFunc
-    });
-} catch (e) {
-    console.log(e);
-}
+});

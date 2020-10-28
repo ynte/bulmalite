@@ -1,0 +1,8 @@
+.dropdown-trigger-button {
+    padding-right: 2.25em;
+
+    &::after {
+        @include arrow($black);
+        right: 0.75em;
+    }
+}

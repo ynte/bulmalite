@@ -1,14 +1,12 @@
+import { createApp } from 'vue';
 
-import Vue from 'vue';
+import './main.scss';
 
-import 'bulma/bulma.sass';
-import '../lib/index';
-
-import App from './app/app.vue';
+import App from './App.vue';
 import router from './router';
+import bulmalite from '/@src/index';
 
-
-new Vue({
-    router,
-    render: (h) => h(App),
-}).$mount('#app');
+const myApp = createApp(App);
+myApp.use(bulmalite);
+myApp.use(router);
+myApp.mount('#app');

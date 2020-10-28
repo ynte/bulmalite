@@ -1,13 +1,15 @@
 # Bulmalite
-A wip unofficial Vue implementation of the Bulma CSS framework.
+A wip unofficial Vue 3 implementation of the Bulma CSS framework.
 
 The principles behind this project:
-* Modular component registration
-* Leverage typescript functionality
-* Usage of Scoped slots instead of child components
+* Modularity
+* Leveraging of typescript functionality
+* Usage of slots in stead of child components
 * Bulma style modifier props
-* Modifiers exist to add functionality, not for removing them
-* Prefer native bulma css classes when possible
+* Props add functionality
+* Passing of native bulma classes is preferred above custom props
+
+Bulmalite >= 0.6 is only compatible with Vue 3.x
 
 ## Comparisons
 These comparisons demonstrate some of the effects the principles outlined above.
@@ -49,30 +51,61 @@ Props use a bulma-like syntax.
 `npm install bulmalite`
 
 ## Usage
-Register all components with
+### Javascript
+Register all components as a plugin
 ```javascript
-import 'bulmalite'
+import { createApp } from 'vue';
+
+import bulmalite from 'bulmalite';
+
+// Create a Vue 3 app the normal way
+const myApp = createApp(App);
+
+// Register bulmalite 
+myApp.use(bulmalite);
+
 ```
 
-Or register individual components with
+Default component names are prefixed with 'bl-';
+
+You can also include individual components from the dist directory
 ```javascript
-import 'bulmalite/lib/components/icon';
-```
+import BlDropdown from 'bulmalite/dist/components/dropdown/Dropdown.vue';
 
-Component names are prefixed with 'bl-';
-
-You can also register them locally, under any name you like
-```javascript
-import Dropdown from 'bulmalite/lib/components/dropdown/dropdown.vue';
-
-new Vue({
-  el: '#app'
+// Add the bulmalite component to the vue component options
+export default {
   components: {
-    'bl-dropdown': Dropdown,
-  }
-})
+    BlDropdown,  
+  },
+  ...
+} 
 ```
-## Development
-Bulmalite is developed using typescript. View models are class style and contained in a seperate .ts file.
 
-Compile the typescript files with either `tsc -d`, `tsc -d -w` or `npm run dev`. To transfer the .vue template files from /src to /lib you can use the included script by running `npm run collect`.
+### Sass
+Bulmalite assumes your dev environment is set up to support .scss files
+
+You can import all stylesheets directly in Javascript or Sass-files
+```javascript
+import 'node_modules/bulmalite/sass/bulmalite.scss';
+```
+
+```scss
+@import '@import "node_modules/bulmalite/sass/bulmalite';
+```
+
+Or load individual styles
+```javascript
+import 'node_modules/bulmalite/sass/components/dropdown.scss';
+```
+
+```scss
+@import '@import "node_modules/bulmalite/sass/components/dropdown';
+```
+
+## Docs
+Documenation is under development in the `/docs/` folder.
+
+## Development
+Bulmalite is developed using typescript. View models use the composition API and contained in a seperate .ts file.
+
+Compile the typescript files with either `tsc -d`. To transfer the .vue template files from /src to /lib you can use the included script by running `npm run collect`. `npm run build` takes care of both steps.
