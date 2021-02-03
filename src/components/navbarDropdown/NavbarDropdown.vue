@@ -8,7 +8,7 @@
             {{ label }}
         </a>
 
-        <div class="navbar-dropdown">
+        <div class="navbar-dropdown" :class="{'is-right': isRight}">
             <slot />
         </div>
     </div>

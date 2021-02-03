@@ -14,6 +14,10 @@ export default defineComponent({
             type: Boolean,
             default: false,
         },
+        isRight: {
+            type: Boolean,
+            default: false,
+        },
     },
     setup(props, { emit }) {
         const { modelValue } = toRefs(props);
