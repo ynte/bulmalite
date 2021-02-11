@@ -5,10 +5,12 @@
         ref="self"
     >
         <a class="navbar-link" @click="isActive = !isActive">
-            {{ label }}
+            <slot name="navbar-link">
+                {{ label }}
+            </slot>
         </a>
 
-        <div class="navbar-dropdown" :class="{'is-right': isRight}">
+        <div class="navbar-dropdown" :class="{ 'is-right': isRight }">
             <slot />
         </div>
     </div>
