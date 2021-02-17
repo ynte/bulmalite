@@ -1,5 +1,5 @@
-import { defineComponent, ref, onMounted, onBeforeUnmount } from 'vue';
-import { useElementBlur } from '../../composables';
+import { defineComponent, ref, onMounted, onBeforeUnmount, toRefs } from 'vue';
+import { useElementBlur, useShadowModelValue } from '../../composables';
 
 export default defineComponent({
     props: {
@@ -7,14 +7,20 @@ export default defineComponent({
             type: Boolean,
             default: false,
         },
+        modelValue: {
+            type: Boolean,
+            default: null,
+        },
         willBlur: {
             type: Boolean,
             default: false,
         },
     },
-    setup(props) {
-        const isActive = ref(false);
+    setup(props, { emit }) {
+        const { modelValue } = toRefs(props);
         const self = ref<HTMLElement | null>(null);
+
+        const isActive = useShadowModelValue(modelValue, emit);
 
         const { cancelBlurListener, registerBlurListener } = useElementBlur(
             self,
