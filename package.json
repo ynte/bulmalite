@@ -6,7 +6,7 @@
         "vue",
         "components"
     ],
-    "version": "0.7.0",
+    "version": "0.8.0",
     "author": "geoloep <contact@geoloep.nl>",
     "license": "MIT",
     "main": "dist/index.js",
