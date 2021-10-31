@@ -13,9 +13,9 @@ export default function (key: string, order = false) {
         const varB = typeof b[key] === 'string' ? b[key].toUpperCase() : b[key];
 
         let comparison = 0;
-        if (varA > varB) {
+        if (varB === null || varA > varB) {
             comparison = 1;
-        } else if (varA < varB) {
+        } else if (varA === null || varA < varB) {
             comparison = -1;
         }
         return order ? comparison * -1 : comparison;
