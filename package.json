@@ -23,18 +23,20 @@
         "vue": "^3.0.0"
     },
     "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^4.4.0",
-        "@typescript-eslint/parser": "^4.4.0",
+        "@types/node": "^16",
+        "@typescript-eslint/eslint-plugin": "^5",
+        "@typescript-eslint/parser": "^5",
         "@vue/compiler-sfc": "^3.0.0",
+        "@vitejs/plugin-vue" : "^1",
         "bulma": "~0.9.1",
-        "eslint": "^7.10.0",
-        "eslint-config-prettier": "^6.12.0",
-        "eslint-plugin-vue": "^6.2.2",
+        "eslint": "^8",
+        "eslint-config-prettier": "^8",
+        "eslint-plugin-vue": "^8",
         "glob": "^7.1.6",
         "prettier": "2.1.1",
         "sass": "^1.27.0",
         "typescript": "^4.0.5",
-        "vite": "^1.0.0-rc.1",
+        "vite": "^2",
         "vue": "^3.0.0",
         "vue-router": "^4.0.0-rc.1"
     }

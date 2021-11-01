@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import Dropdown from '/@docs/views/components/Dropdown.vue';
-import Loading from '/@docs/views/components/Loading.vue';
-import Modal from '/@docs/views/components/Modal.vue';
-import Navbar from '/@docs/views/components/Navbar.vue';
-import NavbarDropdown from '/@docs/views/components/NavbarDropdown.vue';
-import Table from '/@docs/views/components/Table.vue';
-import Th from '/@docs/views/components/Th.vue';
+import Dropdown from './views/components/Dropdown.vue';
+import Loading from './views/components/Loading.vue';
+import Modal from './views/components/Modal.vue';
+import Navbar from './views/components/Navbar.vue';
+import NavbarDropdown from './views/components/NavbarDropdown.vue';
+import Table from './views/components/Table.vue';
+import Th from './views/components/Th.vue';
 
 export default createRouter({
     history: createWebHistory(),

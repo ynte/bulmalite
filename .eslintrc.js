@@ -8,7 +8,5 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
-    "prettier/vue",
-    "prettier/@typescript-eslint"
   ]
 };

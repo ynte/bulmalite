@@ -9,8 +9,7 @@
         "esModuleInterop": true,
         "baseUrl": ".",
         "paths": {
-            "/@src/*": ["src/*"],
-            "/@docs/*": ["docs/*"]
+            "@src/*": ["src/*"],
         }
     },
     "include": ["./src/**/*.ts", "types/sfc.d.ts"],
