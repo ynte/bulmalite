@@ -26,10 +26,12 @@
                 </p>
             </section>
             <footer class="modal-card-foot">
-                <button class="button is-success">Save changes</button>
-                <button class="button" @click="modalVisible = false">
-                    Cancel
-                </button>
+                <div class="buttons">
+                    <button class="button is-success">Save changes</button>
+                    <button class="button" @click="modalVisible = false">
+                        Cancel
+                    </button>
+                </div>
             </footer>
         </div>
     </bl-modal>

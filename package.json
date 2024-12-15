@@ -19,7 +19,7 @@
     },
     "dependencies": {},
     "peerDependencies": {
-        "bulma": "~0.9.1",
+        "bulma": "~1",
         "vue": "^3.0.0"
     },
     "devDependencies": {
@@ -31,7 +31,7 @@
         "@vue/tsconfig": "~0.1",
         "@vuedx/typecheck": "^0.7.0",
         "@vuedx/typescript-plugin-vue": "^0.7.0",
-        "bulma": "~0.9.1",
+        "bulma": "~1",
         "eslint": "^8",
         "eslint-config-prettier": "^9",
         "eslint-plugin-vue": "^9",

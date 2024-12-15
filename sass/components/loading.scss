@@ -1,7 +1,11 @@
-.bl-loading-overlay {
-    @include overlay;
+@use 'bulma/sass/utilities/mixins';
+@use 'sass:color';
 
-    background: rgba($white, 0.5);
+.bl-loading-overlay {
+    @include mixins.overlay;
+
+    //background: bulmaLighten(var(--bulma-white), 1) rgba(var(--bulma-white), 0.5);
+    background-color: hsla(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-l), 0.5);
 
     display: flex;
     justify-content: center;
@@ -9,7 +13,7 @@
 }
 
 .bl-loading {
-    @include loader;
+    @include mixins.loader;
 
     width: 3rem;
     height: 3rem;

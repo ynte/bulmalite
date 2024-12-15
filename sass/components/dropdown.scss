@@ -1,8 +1,10 @@
+@use 'bulma/sass/utilities/mixins';
+
 .dropdown-trigger-button {
     padding-right: 2.25em;
 
     &::after {
-        @include arrow($black);
+        @include mixins.arrow(var(--bulma-black));
         right: 0.75em;
     }
 }
