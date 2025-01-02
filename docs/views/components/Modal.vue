@@ -47,9 +47,10 @@
         </table>
     </section>
     <section class="section">
+        <h2 class="title is-4">Default modal</h2>
         <button class="button" @click="modalVisible = true">Open modal</button>
     </section>
-    <bl-modal v-model="modalVisible" has-background-close has-modal-close>
+    <bl-modal v-model="modalVisible">
         <div class="modal-card">
             <header class="modal-card-head">
                 <p class="modal-card-title">Modal title</p>
@@ -79,6 +80,42 @@
             </footer>
         </div>
     </bl-modal>
+    <section class="section">
+        <h2 class="title is-4">Modal with background and button close</h2>
+        <button class="button" @click="richModalVisible = true">
+            Open modal
+        </button>
+    </section>
+    <bl-modal v-model="richModalVisible" has-background-close has-modal-close>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Modal title</p>
+                <button
+                    class="delete"
+                    aria-label="close"
+                    @click="richModalVisible = false"
+                ></button>
+            </header>
+            <section class="modal-card-body">
+                <h1 class="title">Hello world</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nulla accumsan, metus ultrices eleifend gravida, nulla nunc
+                    varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate
+                    semper dui. Fusce erat odio, sollicitudin vel erat vel,
+                    interdum mattis neque.
+                </p>
+            </section>
+            <footer class="modal-card-foot">
+                <div class="buttons">
+                    <button class="button is-success">Save changes</button>
+                    <button class="button" @click="richModalVisible = false">
+                        Cancel
+                    </button>
+                </div>
+            </footer>
+        </div>
+    </bl-modal>
 </template>
 
 <script lang="ts">
@@ -87,10 +124,12 @@ import { defineComponent, ref } from 'vue';
 export default defineComponent({
     setup() {
         const modalVisible = ref(false);
+        const richModalVisible = ref(false);
 
         return {
             close,
             modalVisible,
+            richModalVisible,
         };
     },
 });

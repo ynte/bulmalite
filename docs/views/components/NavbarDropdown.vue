@@ -92,6 +92,14 @@
                         <hr class="navbar-divider" />
                         <div class="navbar-item">Version 0.9.1</div>
                     </bl-navbar-dropdown>
+                    <bl-navbar-dropdown label="Blurrable dropdown" will-blur>
+                        <template #navbar-link><button class="button is-primary">Custom content</button></template>
+                        <a class="navbar-item"> Overview </a>
+                        <a class="navbar-item"> Elements </a>
+                        <a class="navbar-item"> Components </a>
+                        <hr class="navbar-divider" />
+                        <div class="navbar-item">Version 0.9.1</div>
+                    </bl-navbar-dropdown>
                 </div>
             </div>
         </bl-navbar>
