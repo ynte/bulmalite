@@ -12,8 +12,8 @@
     "main": "dist/index.js",
     "scripts": {
         "dev": "tsc -d -w",
-        "build": "tsc -d && node collect-vue.js",
-        "collect": "node collect-vue.js",
+        "build": "tsc -d && node collect-vue.mjs",
+        "collect": "node collect-vue.mjs",
         "doc:dev": "vite",
         "doc:build": "vite build"
     },
