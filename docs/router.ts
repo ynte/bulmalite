@@ -7,6 +7,7 @@ import Navbar from './views/components/Navbar.vue';
 import NavbarDropdown from './views/components/NavbarDropdown.vue';
 import Table from './views/components/Table.vue';
 import Th from './views/components/Th.vue';
+import About from './views/introduction/About.vue';
 
 export default createRouter({
     history: createWebHistory(),
@@ -18,6 +19,11 @@ export default createRouter({
         }
     },
     routes: [
+        {
+            name: 'about',
+            path: '/',
+            component: About,
+        },
         {
             name: 'dropdown',
             path: '/components/dropdown',
