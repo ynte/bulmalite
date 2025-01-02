@@ -12,7 +12,7 @@
             </ul>
         </aside>
         <hr>
-        <p class="is-size-7">Examples partly from the official bulma documenation. License CC BY-NC-SA 4.0</p>
+        <p class="is-size-7">Examples partly from the official bulma documentation. License CC BY-NC-SA 4.0</p>
     </div>
 </template>
 

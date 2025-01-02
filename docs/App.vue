@@ -20,7 +20,7 @@
     </div>
     <footer class="footer">
         <div class="container">
-            Examples partly from the official bulma documenation. License CC
+            Examples partly from the official bulma documentation. License CC
             BY-NC-SA 4.0
         </div>
     </footer>

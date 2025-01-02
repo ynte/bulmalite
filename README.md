@@ -66,7 +66,7 @@ myApp.use(bulmalite);
 
 ```
 
-Default component names are prefixed with 'bl-';
+Default component names are prefixed with 'bl-'
 
 You can also include individual components from the dist directory
 ```javascript

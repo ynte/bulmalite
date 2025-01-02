@@ -9,7 +9,7 @@ import Table from './components/table/Table.vue';
 import Th from './components/th/Th.vue';
 
 export default {
-    install(app, options: unknown) {
+    install(app) {
         app.component('bl-dropdown', Dropdown);
         app.component('bl-loading', Loading);
         app.component('bl-modal', Modal);

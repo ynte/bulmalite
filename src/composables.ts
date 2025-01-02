@@ -1,4 +1,4 @@
-import { ref, Ref, SetupContext, watch } from 'vue';
+import { ref, Ref, watch } from 'vue';
 
 export const useElementBlur = (
     elementRef: Ref<HTMLElement | null>,
