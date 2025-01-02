@@ -6,6 +6,7 @@
             <thead>
                 <tr>
                     <th>Prop</th>
+                    <th>Required</th>
                     <th>Functionality</th>
                     <th>Type</th>
                 </tr>
@@ -13,16 +14,21 @@
             <tbody>
                 <tr>
                     <td>items</td>
+                    <td>yes</td>
                     <td>Array of items</td>
                     <td><pre>Record&lt;string, any&gt;[]</pre></td>
                 </tr>
                 <tr>
                     <td>columns</td>
+                    <td>no</td>
                     <td>Array of table headers</td>
-                    <td><pre>Array<{header: string; key?: string}></pre></td>
+                    <td>
+                        <pre>Array&lt;{header: string; key?: string}&gt;</pre>
+                    </td>
                 </tr>
                 <tr>
                     <td>is-sortable</td>
+                    <td>no</td>
                     <td>
                         Table can be sorted on columns which have the key
                         property set
@@ -31,11 +37,13 @@
                 </tr>
                 <tr>
                     <td>sorted</td>
+                    <td>no</td>
                     <td>The key of the column to sort on mount</td>
                     <td><pre>string</pre></td>
                 </tr>
                 <tr>
                     <td>is-loading</td>
+                    <td>no</td>
                     <td>Show a loading state</td>
                     <td><pre>boolean</pre></td>
                 </tr>
@@ -52,7 +60,7 @@
             <tbody>
                 <tr>
                     <td>click</td>
-                    <td>Click on table row</td>
+                    <td>Report click on table row, passes row object</td>
                     <td><pre>any</pre></td>
                 </tr>
             </tbody>

@@ -7,17 +7,20 @@
                 <tr>
                     <th>Prop</th>
                     <th>Functionality</th>
+                    <th>Required</th>
                     <th>Type</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>columns</td>
+                    <td>yes</td>
                     <td>Array of table headers</td>
-                    <td><pre>Array<{header: string; key?: string}></pre></td>
+                    <td><pre>Array&lt;{header: string; key?: string}&gt;</pre></td>
                 </tr>
                 <tr>
                     <td>is-sortable</td>
+                    <td>no</td>
                     <td>
                         Table can be sorted on columns which have the key
                         property set
@@ -26,11 +29,13 @@
                 </tr>
                 <tr>
                     <td>sorted</td>
+                    <td>no</td>
                     <td>The key of the column to sort</td>
                     <td><pre>string</pre></td>
                 </tr>
                 <tr>
                     <td>desc</td>
+                    <td>no</td>
                     <td>Sort descending</td>
                     <td><pre>boolean</pre></td>
                 </tr>
