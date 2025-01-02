@@ -14,7 +14,7 @@ export default defineComponent({
     props: {
         items: {
             required: true,
-            type: Array,
+            type: Array<Record<string, any>>,
         },
         columns: {
             type: Array as PropType<ThColumn[]>,
@@ -42,7 +42,7 @@ export default defineComponent({
                 return props.items;
             }
 
-            return props.items.sort(sortHelper(sortOn.value, desc.value));
+            return props.items.toSorted(sortHelper(sortOn.value, desc.value));
         });
 
         const sort = (event: { key: string; desc: boolean }) => {
@@ -61,6 +61,7 @@ export default defineComponent({
                     };
                 });
             }
+            throw new Error('No columns or parsable items provided');
         });
 
         return {
