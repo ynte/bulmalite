@@ -1,6 +1,51 @@
 <template>
     <section class="section">
         <h1 class="title">Navbar</h1>
+        <p class="block">
+            A responsive horizontal navbar that can support images, links,
+            buttons, and dropdowns
+        </p>
+        <table class="table block">
+            <thead>
+                <tr>
+                    <th>Prop</th>
+                    <th>Functionality</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tbody>
+                <tr>
+                    <td><em>v-model</em></td>
+                    <td>Control the active state of the navbar (on mobile)</td>
+                </tr>
+                <tr>
+                    <td>is-fluid</td>
+                    <td>Show a full-width navbar</td>
+                </tr>
+                <tr>
+                    <td>will-blur</td>
+                    <td>The navbar will close when clicked outside</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table block">
+            <thead>
+                <tr>
+                    <th>Slot</th>
+                    <th>Functionality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><em>default</em></td>
+                    <td>.navbar-menu content</td>
+                </tr>
+                <tr>
+                    <td>navbar-brand</td>
+                    <td>.navbar-brand content</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
     <section class="section">
         <h2 class="title is-4">Standard Navbar</h2>

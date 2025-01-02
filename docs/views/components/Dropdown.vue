@@ -1,6 +1,53 @@
 <template>
     <section class="section">
         <h1 class="title">Dropdown</h1>
+        <p class="block">
+            An interactive dropdown menu for discoverable content
+        </p>
+        <table class="table block">
+            <thead>
+                <tr>
+                    <th>Prop</th>
+                    <th>Functionality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><em>v-model</em></td>
+                    <td>Control the active state of the dropdown</td>
+                </tr>
+                <tr>
+                    <td>label</td>
+                    <td>Label for the dropdown button</td>
+                </tr>
+                <tr>
+                    <td>will-blur</td>
+                    <td>Will blur the dropdown when clicked outside</td>
+                </tr>
+                <tr>
+                    <td>dropdown-trigger</td>
+                    <td>Custom trigger for the dropdown</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table block">
+            <thead>
+                <tr>
+                    <th>Slot</th>
+                    <th>Functionality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><em>default</em></td>
+                    <td>Dropdown content</td>
+                </tr>
+                <tr>
+                    <td>dropdown-trigger</td>
+                    <td>Custom trigger for the dropdown</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
     <section class="section">
         <h2 class="title is-4">Default dropdown</h2>
@@ -30,8 +77,8 @@
             <input type="checkbox" v-model="model" />
             Dropdown open
         </label>
-        <br>
-        <br>
+        <br />
+        <br />
         <bl-dropdown label="Dropdown button" v-model="model">
             <div class="dropdown-item">
                 <p>

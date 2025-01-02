@@ -1,11 +1,10 @@
 <template>
     <aside class="menu">
-        <p class="menu-label">
-            Introduction
-        </p>
-        <p class="menu-label">
-            Components
-        </p>
+        <p class="menu-label">Introduction</p>
+        <ul class="menu-list">
+            <router-link :to="{ name: 'about' }">About</router-link>
+        </ul>
+        <p class="menu-label">Components</p>
         <ul class="menu-list">
             <li>
                 <router-link :to="{ name: 'dropdown' }">Dropdown</router-link>
@@ -20,7 +19,9 @@
                 <router-link :to="{ name: 'navbar' }">Navbar</router-link>
             </li>
             <li>
-                <router-link :to="{ name: 'navbar-dropdown' }">Navbar Dropdown</router-link>
+                <router-link :to="{ name: 'navbar-dropdown' }"
+                    >Navbar Dropdown</router-link
+                >
             </li>
             <li>
                 <router-link :to="{ name: 'table' }">Table</router-link>
