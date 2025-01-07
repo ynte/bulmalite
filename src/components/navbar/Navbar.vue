@@ -11,7 +11,8 @@
 
                 <a
                     role="button"
-                    class="navbar-burger burger"
+                    class="navbar-burger"
+                    :class="{ 'is-active': isActive }"
                     @click="isActive = !isActive"
                 >
                     <span aria-hidden="true"></span>
