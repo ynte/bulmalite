@@ -18,12 +18,14 @@
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </a>
             </div>
             <div class="navbar-menu" :class="{ 'is-active': isActive }">
                 <slot></slot>
             </div>
-        </div></nav
-></template>
+        </div>
+    </nav>
+</template>
 
 <script lang="ts" src="./Navbar.ts"></script>
