@@ -6,8 +6,8 @@
         "vue",
         "components"
     ],
-    "version": "1.0.0",
-    "author": "geoloep <contact@geoloep.nl>",
+    "version": "1.0.1",
+    "author": "geoloep <info@geoloep.nl>",
     "license": "MIT",
     "main": "dist/index.js",
     "scripts": {
@@ -23,9 +23,9 @@
         "vue": "^3.0.0"
     },
     "devDependencies": {
-        "@types/node": "^22",
+        "@types/node": "^24",
         "@vue/compiler-sfc": "^3.0.0",
-        "@vitejs/plugin-vue" : "^5",
+        "@vitejs/plugin-vue": "^5",
         "@vue/eslint-config-prettier": "^10",
         "@vue/eslint-config-typescript": "^13",
         "@vue/tsconfig": "~0.1",
@@ -33,8 +33,8 @@
         "@vuedx/typescript-plugin-vue": "^0.7.0",
         "@rushstack/eslint-patch": "^1.10.4",
         "bulma": "~1",
-        "eslint": "^8",
-        "eslint-config-prettier": "^9",
+        "eslint": "^10",
+        "eslint-config-prettier": "^10",
         "eslint-plugin-vue": "^9",
         "glob": "^11",
         "prettier": "^3",
