@@ -25,7 +25,7 @@
     "devDependencies": {
         "@types/node": "^24",
         "@vue/compiler-sfc": "^3.0.0",
-        "@vitejs/plugin-vue": "^5",
+        "@vitejs/plugin-vue": "^6",
         "@vue/eslint-config-prettier": "^10",
         "@vue/eslint-config-typescript": "^13",
         "@vue/tsconfig": "~0.1",
@@ -40,7 +40,7 @@
         "prettier": "^3",
         "sass": "^1",
         "typescript": "^5",
-        "vite": "^6",
+        "vite": "^8",
         "vue": "^3",
         "vue-router": "^4"
     }
