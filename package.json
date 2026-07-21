@@ -27,7 +27,7 @@
         "@vue/compiler-sfc": "^3.0.0",
         "@vitejs/plugin-vue": "^5",
         "@vue/eslint-config-prettier": "^10",
-        "@vue/eslint-config-typescript": "^13",
+        "@vue/eslint-config-typescript": "^14",
         "@vue/tsconfig": "~0.1",
         "@vuedx/typecheck": "^0.7.0",
         "@vuedx/typescript-plugin-vue": "^0.7.0",
